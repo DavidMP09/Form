@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <h1>Formulario De Registro</h1>
+    <p>Por favor llene este formulario con la informacion requerida</p>
+    <form action="https://register-demo.freecodecamp.org" method="post">
+        <fieldset>
+            <label for="first-name">Ingrese su Nombre:
+                <input id="first-name" type="text" name="first-name" required>
+            </label>
+            <label for="last-name">Ingrese su Apellido:
+                <input type="text" id="last-name" name="last-name" required>
+            </label>
+            <label for="email">Ingrese su Email:
+                <input type="email" id="email" name="email" required>
+            </label>
+            <label for="new-password">Crear Contraseña:
+                <input type="password" id="new-password" name="new-password" required minlength="8"
+                    pattern="[a-z0-5]{8,}">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <label for="personal-account"><input id="personal-account" type="radio" name="accont-type" class="inline"> Cuenta Personal
+            </label> 
+            <label for="business-account"><input id="business-account" type="radio" name="accont-type" class="inline" > Cuenta de
+                Negocio </label> 
+            <label for="terms-and-conditions"><input id="terms-and-conditions" type="checkbox" 
+                    name="terms-and-conditions" class="inline" required> Acepta <a
+                    href="https://www.freecodecamp.org/news/terms-of-service/">terminos y condiciones</a> </label>
+        </fieldset>
+        <fieldset>
+            <label for="profile-picture">Sube una foto de Perfil <input id="profile-picture" name="file"
+                    type="file"></label>
+            <label for="age">Ingrese su edad <input id="age" max="120" min="18" type="text" name="age"></label>
+            <label for="referrer">¿ Como te enteraste de nosotros ?
+                <select name="referrer" id="referrer">
+                    <option value="">Seleccione</option>
+                    <option value="1">Noticias</option>
+                    <option value="2">YouTube</option>
+                    <option value="3">Foro</option>
+                    <option value="4">Otros</option>
+                </select>
+            </label>
+            <label for="bio"> Proporcionar una Biografia
+                <textarea name="bio" id="bio" cols="30" rows="3"
+                    placeholder="Ingrese descripcion de su biografia"></textarea>
+            </label>
+        </fieldset>
+        <input type="submit" value="Enviar">
+
+    </form>
+</body>
+
+</html>
